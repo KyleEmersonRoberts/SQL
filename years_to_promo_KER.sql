@@ -1,17 +1,10 @@
 /*
-Update Titles SET to_date = date_add(max(salaries.from_date), interval 1 year) where to_date > '3000-01-01';
+This script places a number next to the name of each empoyee which counts how many times the employee's title changed and then it calculates
+the time it took for the employee to be promoted. I elimanated results where the employee join and quickly left the company. This would give 
+a very short change in title but falsely credit them with a metric of success.
 
-The most interesting thing to look at would be the time in between title changes. Also, did their title change at all? If someone came in from a different company
-as a senior level person, then naturally they'll have the highest income.
-
-
-
-I think I'm going to need to fix this issue with the to_dates
 */
 
-/* This update is only necessary because the data set that I'm using has erronious values for to_dates when it's the employees last year in the company
-	This final to_date is usually something like 9999-01-01 which really messes up a lot of my math, so I go into salary and find the from_date of this 
-    final year and add one year to it. Annoying! But a good problem for me to learn to solve.*/
 with salry 
 		AS (select emp_no, max(from_date) as max_from from salaries group by emp_no)
 update salry, titles 
