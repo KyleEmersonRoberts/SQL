@@ -9,5 +9,4 @@ Using a test database imported into mysql, I set up these scripts to analyze the
 The Demographics script is the most complex, bringing together all the demographic information in a new table 
 that's referenced by the other scripts
 
-I also created a dashboard in Excel that brings pivot tables, charts and slicers to visualize and summerize 
-resulting tables. 
+I also created a dashboard in Excel that brings pivot tables, charts and slicers to visualize and summerize the resulting tables. 
