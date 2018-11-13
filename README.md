@@ -1,8 +1,8 @@
 # SQL
 Using a test database imported into mysql, I set up these scripts to analyze the following metrics of success
 
-- Highest Average Salary over the timeline of the employee
-- Highest Total Income
+- Highest average salary over the timeline of the employee
+- Highest total income
 - Highest average salary growth over a period of at least three years
 - Shortest time between title changes, implicating quick promotions
 
